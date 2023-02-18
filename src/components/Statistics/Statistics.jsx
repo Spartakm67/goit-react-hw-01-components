@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import { UserProfile, UserStats, UserStatsLi, UserData } from 'components/Profile/UserProfile.styled';
 import { Title } from './Statistics.styled';
+import { getRandomHexColor } from '../../utiles/getRandomColor';
 
-
-export const Statistics = ({ title, stats }) => {
-
-// const { id, label, percentage } = stats;
+const Statistics = ({ title, stats }) => {
 
 return (
     <UserProfile>
@@ -14,7 +12,7 @@ return (
   <UserStats>
     {stats.map(stat => {
     return ( 
-    <UserStatsLi key={stat.id}>
+    <UserStatsLi key={stat.id} style={{ backgroundColor: getRandomHexColor()}}>
       <UserData>{stat.label}</UserData>
       <UserData>{stat.percentage} %</UserData>
     </UserStatsLi>)
