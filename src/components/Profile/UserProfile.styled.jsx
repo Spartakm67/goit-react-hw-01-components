@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
   border-radius: 5%;
   margin: auto;
   width: 600px;
-  background-color: #54c7ec;
+  background-color: #aae3f6;
   padding: 20px 40px;
 `;
   const Description = styled.div`
