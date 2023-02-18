@@ -4,8 +4,9 @@ import styled from '@emotion/styled'
   border-radius: 5%;
   margin: auto;
   width: 600px;
-  background-color: #aae3f6;
+  background-color: #3b8ba5;
   padding: 20px 40px;
+  margin-bottom: 15px;
 `;
   const Description = styled.div`
   display: flex;

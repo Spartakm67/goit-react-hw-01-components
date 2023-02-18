@@ -4,6 +4,7 @@ const FriendUl = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 25px;
 `;
 
 const FriendUlLi = styled.li`
