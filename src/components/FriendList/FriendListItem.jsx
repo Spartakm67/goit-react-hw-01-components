@@ -20,3 +20,5 @@ const FriendListItem = ({ friend: { isOnline, avatar, name } }) => {
   };
 
   export default FriendListItem;
+
+//   <span className={isOnline ? css.online : css.offline}></span>

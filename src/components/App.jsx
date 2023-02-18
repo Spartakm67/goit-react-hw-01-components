@@ -9,25 +9,18 @@ import Statistics from './Statistics/Statistics';
 import FriendList from './FriendList/FriendList';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 
+import { Container } from './App.styled';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
+    <Container
     >
      <Profile user={user} />
      <Statistics title="Upload stats" stats={data} />
      <Statistics title="" stats={data} />
      <FriendList friends={friends} />
      <TransactionHistory transactions={transactions} />
-    </div>
+    </Container>
       
   );
 };
