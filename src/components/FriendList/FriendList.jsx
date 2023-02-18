@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendListItem';
+import { FriendUl, FriendUlLi} from './FriendList.styled';
 
 const FriendList = ({ friends }) => {
   return (
-    <ul class="friend-list" style={{ display: 'flex', gap: 16 }}>
+    <FriendUl>
       {friends.map(friend => (
-        <li key={friend.id}>
+        <FriendUlLi key={friend.id}>
           <FriendListItem friend={friend} />
-        </li>
+        </FriendUlLi>
       ))}
-    </ul>
+    </FriendUl>
   );
 };
 
