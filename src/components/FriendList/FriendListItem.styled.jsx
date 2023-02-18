@@ -19,7 +19,10 @@ const StatusOnline = styled.span`
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 15px;
+  background-color: ${props => {
+    return props.isOnline ? 'green' : 'red';
+  }};
   `;
 
 export {FriendAvatar, FriendName, StatusOnline};

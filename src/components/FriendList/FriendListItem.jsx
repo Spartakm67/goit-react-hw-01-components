@@ -5,7 +5,8 @@ import { FriendAvatar, FriendName, StatusOnline } from './FriendListItem.styled'
 const FriendListItem = ({ friend: { isOnline, avatar, name } }) => {
     return (
         <>
-        <StatusOnline>{isOnline}</StatusOnline>
+        <StatusOnline isOnline={isOnline}    
+        ></StatusOnline>
         <FriendAvatar src={avatar} alt="User avatar" width="48" />
         <FriendName>{name}</FriendName>
         </>    
@@ -13,8 +14,8 @@ const FriendListItem = ({ friend: { isOnline, avatar, name } }) => {
           };
     
   
-          FriendListItem.propTypes = {
-    friend: PropTypes.shape({
+ FriendListItem.propTypes = {
+        friend: PropTypes.shape({
         avatar: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         isOnline: PropTypes.bool.isRequired,
@@ -23,7 +24,7 @@ const FriendListItem = ({ friend: { isOnline, avatar, name } }) => {
 
   export default FriendListItem;
 
-//   <span className={
+
   
 
 
