@@ -16,7 +16,7 @@ return (
     return ( 
     <UserStatsLi key={stat.id}>
       <UserData>{stat.label}</UserData>
-      <UserData>{stat.percentage}</UserData>
+      <UserData>{stat.percentage} %</UserData>
     </UserStatsLi>)
     })}
   </UserStats>
