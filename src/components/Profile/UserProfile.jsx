@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { UserProfile, Description } from './UserProfile.styled';
+import { UserProfile, Description, Avatar, UserTitle, 
+  UserData, UserStats, UserStatsLi, UserStatsQ } from './UserProfile.styled';
 
 export const Profile = ({ user }) => {
 const { avatar, username, tag, location, stats: { followers, views, likes } } = user;
@@ -7,30 +8,29 @@ const { avatar, username, tag, location, stats: { followers, views, likes } } = 
     return (
     <UserProfile>
   <Description>
-    <img
+    <Avatar
       src={avatar}
       alt={username}
-      class="avatar"
-    />
-    <p class="name">{username}</p>
-    <p class="tag">@{tag}</p>
-    <p class="location">{location}</p>
+      />
+    <UserTitle>{username}</UserTitle>
+    <UserData>@{tag}</UserData>
+    <UserData>{location}</UserData>
   </Description>
 
-  <ul class="stats">
-    <li>
-      <span class="label">Followers</span>
-      <span class="quantity">{followers}</span>
-    </li>
-    <li>
-      <span class="label">Views</span>
-      <span class="quantity">{views}</span>
-    </li>
-    <li>
-      <span class="label">Likes</span>
-      <span class="quantity">{likes}</span>
-    </li>
-  </ul>
+  <UserStats>
+    <UserStatsLi>
+      <UserData>Followers</UserData>
+      <UserStatsQ>{followers}</UserStatsQ>
+    </UserStatsLi>
+    <UserStatsLi>
+      <UserData>Views</UserData>
+      <UserStatsQ>{views}</UserStatsQ>
+    </UserStatsLi>
+    <UserStatsLi>
+      <UserData>Likes</UserData>
+      <UserStatsQ>{likes}</UserStatsQ>
+    </UserStatsLi>
+  </UserStats>
 </UserProfile>
     );
 };

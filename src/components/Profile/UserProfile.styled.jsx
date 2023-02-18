@@ -1,15 +1,14 @@
 import styled from '@emotion/styled'
 
-export const UserProfile = styled.div`
-border-radius: 5%;
+  const UserProfile = styled.div`
+  border-radius: 5%;
   margin: auto;
   width: 600px;
-  background-color: #ebedf0;
-  padding: 40px;
+  background-color: #54c7ec;
+  padding: 20px 40px;
 `;
-
-export const Description = styled.div`
-display: flex;
+  const Description = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px;
@@ -20,3 +19,47 @@ display: flex;
   border-radius: 25%;
 `;
 
+const Avatar = styled.img`
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background: #f1f1f1;
+`;
+
+const UserTitle = styled.p`
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;    
+`;
+
+const UserData = styled.p`
+  font-size: 22px;
+  font-weight: 500;
+  color: grey;
+  margin-bottom: 10px;
+`;
+
+const UserStats = styled.ul`
+display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+`;
+
+const UserStatsLi = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #e9e9e9;
+  width: calc(100% / 3);
+  padding: 20px 20px;
+  background-color: #f1f1f1;
+`;
+
+const UserStatsQ = styled.span`
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+`;
+
+export {UserProfile, Description, Avatar, UserTitle, UserData, UserStats, UserStatsLi, UserStatsQ};
